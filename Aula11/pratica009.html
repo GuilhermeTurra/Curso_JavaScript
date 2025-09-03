@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+    <style>
+        body {
+            background: white;
+            color: black;
+            font: normal 10pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de nacionalidade</h1>
+    Seu pais é: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var pais = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            var p = pais.value
+
+            res.innerHTML += `<p>Você reside no pais <strong>${p}</strong>.</p>`
+
+            if (pais == 'Brasil') {
+                res.innerHTML += `Você é <strong>Brasileiro!!</strong>`
+            } else {
+                res.innerHTML += `Você é <strong>Estrangeiro!!</strong>`
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!--
+var pais = 'Brasil'
+console.log(`Vivendo em ${pais}`)
+
+if (pais == 'Brasil'){
+    console.log(`Você é Brasileiro!`)
+} else {
+    console.log(`Você é Estrangeiro!`)
+}
+    -->
